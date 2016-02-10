@@ -1,0 +1,221 @@
+/*
+main content
+1- general styles
+2- header
+3- navbar
+4 -slider
+5 -main content
+6-news content
+7-footer
+8-login && register
+
+*/
+
+
+
+
+/*-----------------------------------general styles-------------------------*/
+
+* {
+    font-family: "Yekan", Consolas, Monaco, "Andale Mono", monospace;
+}
+body{
+    background-color: #f0f0f0;
+
+}
+.panel-heading i.fa{
+    margin-left: 5px;
+}
+
+.btn-nafis{
+    background: 0 0;
+    background-color: #2e6da4;
+    color: #ffffff;
+}
+.btn-nafis:hover{
+    background-color: #2b669a;
+    color: #ffffff;
+}
+.panel .panel-heading{
+    background-color: #2aabd2;
+    color: #ffffff;
+}
+li{
+    list-style: none;
+}
+
+
+/*-----------------------------------2 - header-------------------------*/
+header{
+    background-color: #2aabd2;
+}
+header .top-menu-container{
+
+
+}
+header .top-menu{
+
+
+}
+header .top-menu ul{
+    margin: 0;
+    padding: 0;
+}
+header .top-menu ul li{
+    border-left:1px solid #dddddd;
+    width: 80px;
+
+    height: 30px;
+}
+header .top-menu ul.list-inline.top-menu-ul{
+    margin-right: 20px;
+}
+header .top-menu ul li:last-child{
+    border-left: none;
+}
+header .top-menu ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 3px;
+    height: 24px;
+}
+header .social{
+}
+header .social i.fa{
+    font-size: 18px;
+    color: #dddddd;
+}
+
+/*-----------------------------------3 - navbar-------------------------*/
+nav.main-nav{
+    background: 0 0;
+    border: none;
+}
+nav.main-nav .navbar-brand img{
+    width: 60px;
+    margin-top: -10px;
+}
+nav .nav-container{
+    padding: 0;
+    border-bottom: thin solid #dddddd;
+}
+
+/*-----------------------------------4- slider-------------------------*/
+/*slider-effect*/
+.carousel .item{
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+}
+.carousel .active.left, .carousel .active.right{
+    left:0;
+    opacity:0;
+    z-index: 2;
+}
+.carousel .carousel-control{
+    opacity: 1;
+}
+.carousel .next, .carousel .prev{
+    left:0;
+    opacity:1;
+    z-index: 1;
+}
+.carousel .carousel-control{
+    visibility: hidden;
+}
+.carousel:hover .carousel-control{
+    visibility:visible;
+    cursor: pointer;
+}
+
+/*-----------------------------------5- main content-------------------------*/
+main{
+    margin-top: 20px;
+}
+.panel.main-panel img{
+    width: 100%;
+}
+
+
+/*-----------------------------------6-news content-------------------------*/
+.news-container .media-list img.media-object{
+    width: 100px;
+}
+.news-container .media-list .media .media-left{
+    padding-left: 5px;
+}
+.news-container .media-list .media-body{
+    font-size: 12px;
+}
+.news-container .media-list .media-body .media-heading{
+    font-size: 14px;
+}
+.news-container .media-list li.media{
+    border-bottom: 1px dashed #dddddd;
+    padding-bottom: 10px;
+}
+
+/*-----------------------------------7 - footer-------------------------*/
+footer{
+   /* background-color: #333333;*/
+    padding-top: 10px;
+
+}
+footer .main-footer{
+    background-color: #333333;
+    padding-top: 10px;
+}
+footer .copy-right{
+    background-color: #222222;
+}
+footer .info li{
+    color: #eeeeee;
+    margin-bottom: 10px;
+}
+footer .info li i.fa{
+    margin-right: 5px;
+}
+
+/*-----------------------------------8- login && register-------------------------*/
+.checkbox.checkbox-success label{
+    margin-right: 20px;
+}
+label{
+    text-align: right !important;
+    font-weight: 200 !important;
+}
+.login-panel{
+    margin: 20px auto;
+
+}
+
+/*----------------------------- - Media Queries -------------------------------*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
