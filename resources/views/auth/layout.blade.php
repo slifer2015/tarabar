@@ -10,31 +10,13 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
+<div class="container">
+    <div class="row">
 
-<!--header begins-->
-@include('main.partials.header')
-<!--header ends-->
+       @yield('content')
 
-<!--navbar begins-->
-@include('main.partials.navbar')
-<!--navbar ends-->
-
-<!--slider begins-->
-
-<!--slider ends-->
-
-<!--main content begins-->
-
-<!--main content ends-->
-
-<!--news feed begins-->
-
-<!--news feed ends-->
-
-<!--footer begins-->
-@include('main.partials.footer')
-<!--footer ends-->
-
+    </div>
+</div>
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 </body>
