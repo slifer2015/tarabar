@@ -26,3 +26,13 @@
 Route::group(['middleware' => ['web']], function () {
     Route::get('/','IndexController@index');
 });
+
+Route::group(['middleware' => 'web'], function () {
+    //Route::auth();
+    Route::get('/login','Auth\AuthController@showLoginForm');
+    Route::post('/login', 'Auth\AuthController@login');
+    Route::get('/register','Auth\AuthController@showRegistrationForm');
+    Route::post('/register', 'Auth\AuthController@register');
+    Route::get('/logout','Auth\AuthController@logout');
+    Route::get('/home', 'HomeController@index');
+});
