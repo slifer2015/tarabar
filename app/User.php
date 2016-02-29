@@ -27,4 +27,5 @@ class User extends Authenticatable
     public function news(){
         return $this->hasMany('App\News');
     }
+
 }

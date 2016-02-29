@@ -20,11 +20,41 @@
 <!--navbar ends-->
 
 <!--slider begins-->
-
+@include('main.partials.slider')
 <!--slider ends-->
 
-<!--main content begins-->
+<!-- Error Messages -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="alerts-box">
+                @if($errors->any())
+                    <ul class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Error Messages ends -->
+
+<!-- Flash Messages -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            @include('flash::message')
+        </div>
+    </div>
+</div>
+
+<!-- Flash Messages ends -->
+
+<!--main content begins-->
+@yield('content')
 <!--main content ends-->
 
 <!--news feed begins-->

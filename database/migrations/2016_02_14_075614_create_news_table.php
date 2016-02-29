@@ -20,6 +20,7 @@ class CreateNewsTable extends Migration
             $table->longText('content');
             $table->boolean('status')->default(1);
             $table->integer('num_visit')->unsigned()->default(0);
+            $table->string('image',100)->nullable();
             $table->timestamps();
         });
     }

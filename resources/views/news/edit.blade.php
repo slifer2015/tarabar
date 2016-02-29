@@ -4,30 +4,35 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-خبر جدید
+                    ویرایش خبر
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            {!! Form::open(['route'=>'xadmin.news.store','method'=>'post', 'enctype'=>'multipart/form-data']) !!}
+                            {!! Form::model($news,['route'=>['xadmin.news.update',$news->id],'method'=>'post', 'enctype'=>'multipart/form-data']) !!}
                             <div class="form-group">
                                 <label for="title">عنوان</label>
-                                <input id="title" name="title" class="form-control"
-                                       placeholder="عنوان را وارد نمایید ...">
+                                {!! Form::text('title',null,['class'=>'form-control','id'=>'title']) !!}
                             </div>
                             <div class="form-group">
                                 <label for="image">درج تصویر</label>
                                 <input class="form-control" id="image" name="image" type="file">
                             </div>
+                            @if($news->image)
+                                <div class="form-group">
+                                    <img width="100" src="{{asset('images/news/')}}/{{$news->image}}" alt="">
+
+                                </div>
+                            @endif
                             {{--summernote--}}
                             {!! Form::textarea('content', null, ['class'=>'form-control article_summernote', 'rows'=>'10']) !!}
                             <div class="form-group">
                                 <label>وضعیت انتشار</label>
-                                {!! Form::select('status', [1=>'منتشر شود', 0=>'منتشر نشود'], 1, ['class'=>'form-control select-status']) !!}
+                                {!! Form::select('status', [1=>'منتشر شود', 0=>'منتشر نشود'], null, ['class'=>'form-control select-status']) !!}
                             </div>
                             <div class="form-group">
                                 <label>برچسب ها</label>
-                                {!! Form::select('tags[]', [], null, ['id'=>'tags_select','class'=>'form-control','multiple']) !!}
+                                {!! Form::select('tags[]', $tags, $selectedTags, ['id'=>'tags_select','class'=>'form-control','multiple']) !!}
                             </div>
                             <button type="submit" class="btn btn-success">ارسال</button>
 

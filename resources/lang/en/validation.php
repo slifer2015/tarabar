@@ -92,6 +92,12 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'name'=>[
+            'required' => 'لطفا نام خود را وارد کنید',
+        ],
+        'url'=>[
+            'required' => 'لطفا آدرس سایت را وارد کنید',
+        ]
     ],
 
     /*

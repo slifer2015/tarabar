@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Link;
+use App\News;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -27,6 +29,14 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+
+        $router->bind('link',function($value){
+            return Link::findOrFail($value);
+        });
+
+        $router->bind('news',function($value){ //news is name of wildcard
+            return News::findOrFail($value);
+        });
     }
 
     /**

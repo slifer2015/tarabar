@@ -50,7 +50,7 @@ function uploadArticleFile(file, editor, welEditable) {
     $.ajax({
         data: data,
         type: 'POST',
-        url: '/admin/article/upload',
+        url: '/ajax/news/uploadSummernote',
         cache: false,
         contentType: false,
         processData: false,
@@ -72,7 +72,7 @@ function deleteArticleFile(file,editor,editable){
             _method:'delete'
         },
         type:'POST',
-        url:'/admin/article/delete',
+        url:'/ajax/news/deleteSummernote',
         success:function(){
 
         }

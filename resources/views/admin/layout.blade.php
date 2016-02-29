@@ -55,7 +55,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> مدیریت <span style="color: #ff685d">تینکر</span></a>
+            <a class="navbar-brand" href="index.html"> مدیریت <span style="color: #ff685d">نفیس ترابر</span></a>
         </div>
         <!-- /.navbar-header -->
 
@@ -68,7 +68,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <strong>احمد دارا</strong>
+                                <strong>طراحان وب ایران</strong>
                                     <span class="pull-left text-muted">
                                         <em>دیروز</em>
                                     </span>
@@ -80,7 +80,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <strong>عماد میرزایی</strong>
+                                <strong>ایران وب هاست</strong>
                                     <span class="pull-left text-muted">
                                         <em>دیروز</em>
                                     </span>
@@ -242,12 +242,12 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> پروفایل</a>
+                    <li><a href="{{route('xadmin.password.change')}}"><i class="fa fa-user fa-fw"></i> تغییر گذرواژه</a>
                     </li>
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> تنظیمات</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-power-off fa-fw"></i> خروج</a>
+                    <li><a href="{{url('logout')}}"><i class="fa fa-power-off fa-fw"></i> خروج</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -271,25 +271,38 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> داشبورد</a>
+                        <a href="{{route('xadmin.index')}}"><i class="fa fa-dashboard fa-fw"></i> داشبورد</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> آمار<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> اخبار<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">جداول فلوت</a>
+                                <a href="{{route('xadmin.news.create')}}"> ایجاد خبر</a>
                             </li>
                             <li>
-                                <a href="morris.html">جداول موریس</a>
+                                <a href="{{route('xadmin.news.index')}}"> مشاهده-ویرایش</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> جداول</a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> لینک ها<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{route('xadmin.link.create')}}"> ایجاد لینک</a>
+                            </li>
+                            <li>
+                                <a href="{{route('xadmin.link.index')}}"> مشاهده-ویرایش</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="{{route('xadmin.order.index')}}"><i class="fa fa-table fa-fw"></i> درخواست نرخ</a>
                     </li>
                     <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> فرم ها</a>
+                        <a href="{{route('xadmin.contact.index')}}"><i class="fa fa-edit fa-fw"></i>تماس ها</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> ابزارها<span class="fa arrow"></span></a>
@@ -410,7 +423,17 @@
 <script src="{{asset('admin/js/admin.js')}}"></script>
 
 @yield('script')
+<script>
 
+    $(document).ready(function(){
+        $('a[data-delete-confirm]').click(function(){
+            if (!confirm('آیا مطمئن هستید که می خواهید این رکورد را حذف نمایید ؟')) {
+                return false;
+            }
+        });
+    });
+
+</script>
 </body>
 
 </html>
