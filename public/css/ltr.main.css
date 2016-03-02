@@ -89,20 +89,12 @@ header .social i.fa{
 }
 
 /*-----------------------------------3 - navbar-------------------------*/
-nav.main-nav{
-    background: 0 0;
-    border: none;
-}
-nav.main-nav .navbar-header{
-    float: left;
-}
 nav.main-nav .navbar-brand img{
     width: 60px;
     margin-top: -10px;
 }
-nav .nav-container{
-    padding: 0;
-    border-bottom: thin solid #dddddd;
+nav.main-nav .navbar-header{
+    float: right;
 }
 
 /*-----------------------------------4- slider-------------------------*/
@@ -164,7 +156,7 @@ main{
 
 /*-----------------------------------7 - footer-------------------------*/
 footer{
-   /* background-color: #333333;*/
+    /* background-color: #333333;*/
     padding-top: 10px;
 
 }

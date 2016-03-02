@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    {{--for rtl--}}
+    <?php
+        if(\Illuminate\Support\Facades\App::getLocale()=='fa') {
+
+    ?>
     <link rel="stylesheet" href="{{asset('css/bootstrap-rtl.css')}}">
+    <?php
+        }
+    ?>
+    {{--for rtl--}}
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    {{--for ltr--}}
+    <?php
+    if(\Illuminate\Support\Facades\App::getLocale()=='en') {
+
+        ?>
+    <link rel="stylesheet" href="{{asset('css/ltr.main.css')}}">
+    <?php
+    }
+    ?>
+    {{--for ltr--}}
 </head>
 <body>
 

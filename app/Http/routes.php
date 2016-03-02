@@ -24,7 +24,7 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/',['as'=>'home','uses'=>'IndexController@index']);
+    Route::get('/{locale?}',['as'=>'home','uses'=>'IndexController@index']);
 });
 
 Route::group(['middleware' => 'web'], function () {
