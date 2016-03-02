@@ -1,4 +1,3 @@
-<main>
     <div class="container news-container">
         <div class="row">
             <div class="col-sm-12">
@@ -33,4 +32,3 @@
             </div>
         </div>
     </div>
-</main>

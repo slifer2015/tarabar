@@ -16,12 +16,22 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <li><a href="#">{{trans('main.menu.home')}}<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">{{trans('main.menu.aboutUs')}}</a></li>
 
             </ul>
             <ul class="nav navbar-nav">
                 <li><a href="#">{{trans('main.menu.contactUs')}}</a></li>
+=======
+                <li><a href="#">صفحه نخست<span class="sr-only">(current)</span></a></li>
+                <li><a href="">درباره ما</a></li>
+                <li><a href="">اخبار </a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{route('contact')}}">تماس با ما</a></li>
+>>>>>>> b8ab0265c46b279a081244f7ecb967794247b225
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('main.menu.services.title')}}<span class="caret"></span></a>
                     <ul class="dropdown-menu">

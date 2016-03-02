@@ -107,6 +107,9 @@ nav .nav-container{
 
 /*-----------------------------------4- slider-------------------------*/
 /*slider-effect*/
+.slide{
+   /* margin-bottom: 10px;*/
+}
 .carousel .item{
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
