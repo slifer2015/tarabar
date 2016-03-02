@@ -305,22 +305,16 @@
                         <a href="{{route('xadmin.contact.index')}}"><i class="fa fa-edit fa-fw"></i>تماس ها</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> ابزارها<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> مدیریت صفحه اصلی<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">پنل</a>
+                                <a href="panels-wells.html">درباره ما</a>
                             </li>
                             <li>
-                                <a href="buttons.html">دکمه ها</a>
+                                <a href="buttons.html">باکس 1</a>
                             </li>
                             <li>
-                                <a href="notifications.html">پیغام ها</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">نوع</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">شبکه بندی</a>
+                                <a href="notifications.html">باکس 2</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
