@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>شرکت نفیس ترابر</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-rtl.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
@@ -54,7 +54,9 @@
 <!-- Flash Messages ends -->
 
 <!--main content begins-->
-@yield('content')
+<main>
+    @yield('content')
+</main>
 <!--main content ends-->
 
 <!--news feed begins-->
@@ -67,5 +69,6 @@
 
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
+@yield('script')
 </body>
 </html>
